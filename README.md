@@ -36,6 +36,8 @@ x.head()
 y=data["left"]
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=100)
+dt.fit(x_train,y_train)
+y_pred=dt.predict(x_test)
 from sklearn.tree import DecisionTreeClassifier
 dt=DecisionTreeClassifier(criterion="entropy")
 from sklearn import metrics
